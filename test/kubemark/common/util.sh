@@ -36,7 +36,7 @@ function run-cmd-with-retries {
       fi
       # shellcheck disable=SC2154 # Color defined in sourced script
       echo -e "${color_yellow}Attempt $attempt failed to $1 $2 ${3:-}. Retrying.${color_norm}" >& 2
-      sleep $((attempt * 5))
+      sleep $((attempt * 15))
     else
       # shellcheck disable=SC2154 # Color defined in sourced script
       echo -e "${color_green}Succeeded to $1 $2 ${3:-}.${color_norm}"
